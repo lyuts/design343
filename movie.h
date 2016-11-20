@@ -7,58 +7,74 @@
 
 
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
 // Base class
 class Movie {
 public:
-    // pure virtual function providing interface framework.
-    virtual int sort()= 0;
+    virtual void sort()= 0;
 
     int getStock() {
-       return stock;
+        return stock;
     }
 
     std::string getDirector() {
         return director;
     }
 
+    std::string getTitle() {
+        return title;
+    }
+
+    int getYear() {
+        return year;
+    }
+
 protected:
     int stock;
+    int year;
     std::string director;
     std::string title;
 };
 
 // Derived classes
-class Comedy: public Movie {
+class Comedy : public Movie {
+    //Comedy movies (‘F’) sorted by Title, then Year it released
+    void sort() {
 
-};
-
-class Triangle: public Shape {
-
-public:
-    int getArea() {
-        return (width * height)/2;
     }
 };
 
+class Drama : public Movie {
+    // dramas (‘D’) are sorted by Director, then Title
+    void sort() {
+
+    }
+};
+
+class Classic : public Movie {
+    // classics (‘C’) are sorted by Release date, then Major actor
+    void sort() {
+
+    }
+
+private:
+    int month;
+    std::string majorActor;
+
+    int getMonth() {
+        return month;
+    }
+
+    std::string getMajorActor() {
+        return majorActor;
+    };
+};
+
 int main(void) {
-    Rectangle Rect;
-    Triangle  Tri;
 
-    Rect.setWidth(5);
-    Rect.setHeight(7);
-    // Print the area of the object.
-    cout << "Total Rectangle area: " << Rect.getArea() << endl;
-
-    Tri.setWidth(5);
-    Tri.setHeight(7);
-
-    // Print the area of the object.
-    cout << "Total Triangle area: " << Tri.getArea() << endl;
-
-    return 0;
 }
 
 #endif //MOVIE_RENTAL_MOVIE_H
