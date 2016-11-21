@@ -1,14 +1,9 @@
 // Drama class declaration
-
 #include "movie.h"
 
-class Drama : public Movie
-{
+class Drama : public Movie {
 public:
-	// Default constructor
-	Drama();
-	// Member functions
-	bool operator == (Drama& rhs) const;	// overload for BST
-	bool operator > (Drama& rhs) const;		// overload for BST
+	Drama(string director, string title, int releaseYear):
+            director(director), movie(movie), releaseYear(releaseYear){};
 	void display() const;
 };

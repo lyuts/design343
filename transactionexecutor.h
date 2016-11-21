@@ -1,5 +1,4 @@
 // TransactionExecutor class declaration
-
 #include "borrow.h"
 #include "return.h"
 #include "history.h"
@@ -8,8 +7,7 @@
 #include <fstream>
 using namespace std;
 
-class TransactionExecutor
-{
+class TransactionExecutor {
 public:
 	TransactionExecutor();
 	~TransactionExecutor();
@@ -18,12 +16,8 @@ public:
 	void process(Return *e);
 	void process(History *e);
 	void process(Inventory *e);
-	bool searchInventory(char type);
-	bool searchComedies(Comedy &movie);
-	bool searchDramas(Drama &movie);
-	bool searchClassics(Classic &movie);
-
+	bool searchInventory(char type, string identifier); // identifier can be a director or title
 private:
 	Transaction *transactions;	// array of transactions
-	LocationInventory &inventory;	// reference to store inventory
+	System& store;	// reference to store
 };

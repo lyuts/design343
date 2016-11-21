@@ -2,11 +2,9 @@
 
 #include "movie.h"
 
-class Comedy : public Movie
-{
+class Comedy : public Movie {
 public:
-	Comedy();
-	bool operator == (Comedy& rhs) const;
-	bool operator > (Comedy& rhs) const;
+	Comedy(string director, string movie, int releaseYear):
+            director(director), movie(movie), releaseYear(releaseYear){};
 	void display() const;
 };

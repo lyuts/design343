@@ -1,19 +1,14 @@
 // AccountManager declaration
-
 #include "account.h"
 #include "hashtable.h"
 
-class AccountManager
-{
+class AccountManager {
 public:
-	// Default constructor
 	AccountManager();
-	// Member functions
-	void readAccountData();		// inputs "*customers.txt" and creates list of accounts
-	bool addAccount(Account);
-	bool contains(int id) const;// returns true if argument ID exists on list
-	void display() const;		// displays contents of account list
-
+	void readAccountData(istream& file);		// inputs "*customers.txt" and creates list of accounts
+	bool addAccount(Account account);
+	bool contains(int id) const;// returns true if argument ID exists in list of accounts
+	void display() const;		// displays all accounts
 private:
 	HashTable<Account> accounts;// a hashtable of accounts
 };
