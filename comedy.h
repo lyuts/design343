@@ -2,9 +2,13 @@
 
 #include "movie.h"
 
+#ifndef COMEDY_H
+#define COMEDY_H
+
 class Comedy : public Movie {
 public:
-	Comedy(string director, string movie, int releaseYear):
-            director(director), movie(movie), releaseYear(releaseYear){};
+	Comedy();
+	Comedy(int stock, string dir, string mov, int year);
 	void display() const;
 };
+#endif

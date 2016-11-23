@@ -1,5 +1,5 @@
 // Account represents a customer's account with their unique 4-digit ID, their first name, and their last name.
-// The Account class allows for getting and setting each attribute and displaying an the transaction history.
+// Allows for getting and setting each attribute, and displaying the transaction history.
 class Account {
 public:
 	Account();

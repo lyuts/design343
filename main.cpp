@@ -1,6 +1,14 @@
 #include <iostream>
+#include "system.h"
+#include "hashtable.h"
+
+
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+	HashTable<char, BST<Item>> inventory;
+	BST<Comedy> comedy;
+	inventory.put('C', comedy);
+
+	Item *foo = new Comedy();
+
 }
