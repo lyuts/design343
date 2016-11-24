@@ -1,3 +1,6 @@
+#ifndef RETURN_H
+#define RETURN_H
+
 // Return class declaration
 #include "transaction.h"
 
@@ -11,3 +14,5 @@ public:
 private:
 	Item product;
 };
+
+#endif

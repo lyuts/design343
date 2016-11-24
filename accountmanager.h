@@ -1,3 +1,6 @@
+#ifndef ACCOUNT_MANAGER_H
+#define ACCOUNT_MANAGER_H
+
 // AccountManager declaration
 
 #include "account.h"
@@ -14,3 +17,5 @@ public:
 private:
 	HashTable<int, Account> accounts;	// a hashtable of accounts
 };
+
+#endif // ACCOUNT_MANAGER_H

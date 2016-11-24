@@ -1,3 +1,6 @@
+#ifndef HISTORY_H
+#define HISTORY_H
+
 // History class declaration
 #include "transaction.h"
 
@@ -11,3 +14,5 @@ public:
 				// add to account history list
 		// display account history list
 };
+
+#endif // HISTORY_H

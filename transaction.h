@@ -1,3 +1,6 @@
+#ifndef TRANSACTION_H
+#define TRANSACTION_H
+
 // Transaction class declaration
 #include "item.h"
 #include "movie.h"
@@ -14,3 +17,5 @@ public:
 private:
 	int accountID;
 };
+
+#endif // TRANSACTION_H

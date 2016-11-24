@@ -1,3 +1,10 @@
+#ifndef ACCOUNT_H
+#define ACCOUNT_H
+
+#include <string>
+
+using namespace std;
+
 // Account represents a customer's account with their unique 4-digit ID, their first name, and their last name.
 // Allows for getting and setting each attribute, and displaying the transaction history.
 class Account {
@@ -15,3 +22,5 @@ private:
 	string firstName, lastName;
 	int accountID;
 };
+
+#endif // ACCOUNT_H

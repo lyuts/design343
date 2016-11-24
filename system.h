@@ -1,3 +1,6 @@
+#ifndef SYSTEM_H
+#define SYSTEM_H
+
 #include "accountmanager.h"
 #include "hashtable.h"
 #include "bst.h"
@@ -20,3 +23,5 @@ private:
 	TransactionExecutor executor;	// transaction manager
     HashTable<char, BST<Item>> inventory;	// HashTbale of items BSTs (eg., Comedy, Drama, Classic)
 };	
+
+#endif

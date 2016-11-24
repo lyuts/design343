@@ -4,9 +4,11 @@
 
 class Classic : public Movie {
 public:
-	Classic(string director, string title, int releaseYear, int releaseMonth, string majorActor):
-            director(director), title(title), releaseYear(releaseYear), releaseMonth(releaseMonth),
-            majorActor(majorActor){};
+	Classic(string director, string title, int releaseYear, int releaseMonth, string majorActor)
+        : Movie(0, director, title, releaseYear),
+            releaseMonth(releaseMonth),
+            majorActor(majorActor){}
+
 	int getReleaseMonth() const;
 	string getMajorActor() const;
 	void setReleaseMonth(int month);

@@ -1,3 +1,5 @@
+#ifndef BORROW_H
+#define BORROW_H
 // Borrow class declaration
 
 #include "transaction.h"
@@ -12,3 +14,5 @@ public:
 private:
 	Item product;
 };
+
+#endif

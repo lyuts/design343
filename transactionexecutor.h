@@ -7,6 +7,7 @@
 #include <fstream>
 using namespace std;
 
+class System;
 class TransactionExecutor {
 public:
 	TransactionExecutor();
@@ -19,5 +20,5 @@ public:
 	bool searchInventory(char type, string identifier); // identifier can be a director or title
 private:
 	Transaction *transactions;	// array of transactions
-	System& store;	// reference to store
+	System* store;	// reference to store
 };

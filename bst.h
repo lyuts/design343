@@ -1,3 +1,6 @@
+#ifndef BST_H
+#define BST_H
+
 // BST class declaration (binary search tree template)
 
 template <typename T>
@@ -5,8 +8,8 @@ class BST {
 public:
 	BST();
 	~BST();
-	template<typename To, enable_if_t<is_base_of<To, T>>* = nullptr> // conversion operator declaration
-	operator BST<To>() const { } // conversion operator
+//	template<typename To, enable_if_t<is_base_of<To, T>>* = nullptr> // conversion operator declaration
+//	operator BST<To>() const { } // conversion operator
 	bool insert(T item);	// adds item to tree
 	bool find(T item);		// finds item in tree
 	bool remove(T item);	// removes item from tree
@@ -20,3 +23,5 @@ private:
 	};
 	BSTNode *root;			// pointer to root of tree
 };
+
+#endif // BST_H

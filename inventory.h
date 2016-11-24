@@ -1,3 +1,6 @@
+#ifndef INVENTORY_H
+#define INVENTORY_H
+
 // Inventory class declaration
 #include "transaction.h"
 
@@ -6,3 +9,5 @@ public:
 	Inventory();
 	bool process();	// inventory display method
 };
+
+#endif // INVENTORY_H
